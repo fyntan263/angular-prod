@@ -1,0 +1,27 @@
+<main class="container">
+  <h1>Hello, {{ title() }}</h1>
+  <p class="subtitle">A minimal Angular development environment, verified end to end.</p>
+
+  <section class="card">
+    <h2>Greeting</h2>
+    <label for="name-input">Your name</label>
+    <input
+      id="name-input"
+      type="text"
+      [(ngModel)]="name"
+      placeholder="e.g. Ada Lovelace"
+      autocomplete="off"
+    />
+    <p class="greeting" data-testid="greeting">{{ greeting() }}</p>
+  </section>
+
+  <section class="card">
+    <h2>Counter</h2>
+    <p class="count" data-testid="count">{{ count() }}</p>
+    <div class="actions">
+      <button type="button" (click)="decrement()">-</button>
+      <button type="button" (click)="reset()">Reset</button>
+      <button type="button" (click)="increment()">+</button>
+    </div>
+  </section>
+</main>
